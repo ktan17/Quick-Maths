@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41E951DECE2594A73AE0B9C3 /* Pods_Quick_MathsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7A9FA49AF932CC212906DC /* Pods_Quick_MathsUITests.framework */; };
 		443DE17D2110A40300D9AFE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443DE17C2110A40300D9AFE1 /* AppDelegate.swift */; };
 		443DE17F2110A40300D9AFE1 /* SketchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443DE17E2110A40300D9AFE1 /* SketchViewController.swift */; };
 		443DE1822110A40300D9AFE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443DE1802110A40300D9AFE1 /* Main.storyboard */; };
@@ -15,6 +16,10 @@
 		443DE1922110A40500D9AFE1 /* Quick_MathsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443DE1912110A40500D9AFE1 /* Quick_MathsTests.swift */; };
 		443DE19D2110A40500D9AFE1 /* Quick_MathsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443DE19C2110A40500D9AFE1 /* Quick_MathsUITests.swift */; };
 		443DE1AC2110AD0C00D9AFE1 /* IndieFlower.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 443DE1AB2110AD0C00D9AFE1 /* IndieFlower.ttf */; };
+		443DE1AE2110D15600D9AFE1 /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443DE1AD2110D15600D9AFE1 /* UIImage+Additions.swift */; };
+		443DE1B0211104E800D9AFE1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443DE1AF211104E800D9AFE1 /* TestViewController.swift */; };
+		9C3962CB54A7DE575E14B351 /* Pods_Quick_Maths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D00EF1B168CFA2FEB31BFC2 /* Pods_Quick_Maths.framework */; };
+		E9C97889E4026AC1848CCFAB /* Pods_Quick_MathsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC260FA1154694C073EF012 /* Pods_Quick_MathsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CC260FA1154694C073EF012 /* Pods_Quick_MathsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quick_MathsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A684042725EF64C7EA0D467 /* Pods-Quick MathsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quick MathsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quick MathsTests/Pods-Quick MathsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E6F209F6B979AE6CB6E77DA /* Pods-Quick Maths.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quick Maths.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quick Maths/Pods-Quick Maths.debug.xcconfig"; sourceTree = "<group>"; };
 		443DE1792110A40300D9AFE1 /* Quick Maths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quick Maths.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		443DE17C2110A40300D9AFE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		443DE17E2110A40300D9AFE1 /* SketchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +57,14 @@
 		443DE19C2110A40500D9AFE1 /* Quick_MathsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quick_MathsUITests.swift; sourceTree = "<group>"; };
 		443DE19E2110A40500D9AFE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		443DE1AB2110AD0C00D9AFE1 /* IndieFlower.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IndieFlower.ttf; sourceTree = "<group>"; };
+		443DE1AD2110D15600D9AFE1 /* UIImage+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
+		443DE1AF211104E800D9AFE1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		613763A1F03BFCD9F484490A /* Pods-Quick MathsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quick MathsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quick MathsTests/Pods-Quick MathsTests.release.xcconfig"; sourceTree = "<group>"; };
+		8D00EF1B168CFA2FEB31BFC2 /* Pods_Quick_Maths.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quick_Maths.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEFC7ED8786B6D49C1D98CCB /* Pods-Quick MathsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quick MathsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quick MathsUITests/Pods-Quick MathsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD7A9FA49AF932CC212906DC /* Pods_Quick_MathsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quick_MathsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E978BAD67B296CD2EA769C /* Pods-Quick Maths.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quick Maths.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quick Maths/Pods-Quick Maths.release.xcconfig"; sourceTree = "<group>"; };
+		F002DBD9D67D491695070C79 /* Pods-Quick MathsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quick MathsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quick MathsUITests/Pods-Quick MathsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C3962CB54A7DE575E14B351 /* Pods_Quick_Maths.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9C97889E4026AC1848CCFAB /* Pods_Quick_MathsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +88,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41E951DECE2594A73AE0B9C3 /* Pods_Quick_MathsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17586E30B4380CBB44E7D205 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E6F209F6B979AE6CB6E77DA /* Pods-Quick Maths.debug.xcconfig */,
+				D8E978BAD67B296CD2EA769C /* Pods-Quick Maths.release.xcconfig */,
+				2A684042725EF64C7EA0D467 /* Pods-Quick MathsTests.debug.xcconfig */,
+				613763A1F03BFCD9F484490A /* Pods-Quick MathsTests.release.xcconfig */,
+				AEFC7ED8786B6D49C1D98CCB /* Pods-Quick MathsUITests.debug.xcconfig */,
+				F002DBD9D67D491695070C79 /* Pods-Quick MathsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		443DE1702110A40300D9AFE1 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +115,8 @@
 				443DE1902110A40500D9AFE1 /* Quick MathsTests */,
 				443DE19B2110A40500D9AFE1 /* Quick MathsUITests */,
 				443DE17A2110A40300D9AFE1 /* Products */,
+				17586E30B4380CBB44E7D205 /* Pods */,
+				DAD6B546DA43103255419E59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,7 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				443DE17C2110A40300D9AFE1 /* AppDelegate.swift */,
+				443DE1AD2110D15600D9AFE1 /* UIImage+Additions.swift */,
 				443DE17E2110A40300D9AFE1 /* SketchViewController.swift */,
+				443DE1AF211104E800D9AFE1 /* TestViewController.swift */,
 				443DE1802110A40300D9AFE1 /* Main.storyboard */,
 				443DE1832110A40500D9AFE1 /* Assets.xcassets */,
 				443DE1AA2110ACFB00D9AFE1 /* Fonts */,
@@ -136,6 +172,16 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		DAD6B546DA43103255419E59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D00EF1B168CFA2FEB31BFC2 /* Pods_Quick_Maths.framework */,
+				1CC260FA1154694C073EF012 /* Pods_Quick_MathsTests.framework */,
+				CD7A9FA49AF932CC212906DC /* Pods_Quick_MathsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 443DE1A12110A40500D9AFE1 /* Build configuration list for PBXNativeTarget "Quick Maths" */;
 			buildPhases = (
+				7E5523DAEFE793DCC42C0473 /* [CP] Check Pods Manifest.lock */,
 				443DE1752110A40300D9AFE1 /* Sources */,
 				443DE1762110A40300D9AFE1 /* Frameworks */,
 				443DE1772110A40300D9AFE1 /* Resources */,
+				1B06740A8FCD8BB4F02B7A8E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +208,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 443DE1A42110A40500D9AFE1 /* Build configuration list for PBXNativeTarget "Quick MathsTests" */;
 			buildPhases = (
+				D0192D5971AE0D94B114BE65 /* [CP] Check Pods Manifest.lock */,
 				443DE1892110A40500D9AFE1 /* Sources */,
 				443DE18A2110A40500D9AFE1 /* Frameworks */,
 				443DE18B2110A40500D9AFE1 /* Resources */,
@@ -178,6 +227,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 443DE1A72110A40500D9AFE1 /* Build configuration list for PBXNativeTarget "Quick MathsUITests" */;
 			buildPhases = (
+				B614B24EBAEC518F1718680B /* [CP] Check Pods Manifest.lock */,
 				443DE1942110A40500D9AFE1 /* Sources */,
 				443DE1952110A40500D9AFE1 /* Frameworks */,
 				443DE1962110A40500D9AFE1 /* Resources */,
@@ -263,6 +313,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B06740A8FCD8BB4F02B7A8E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Quick Maths/Pods-Quick Maths-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quick Maths/Pods-Quick Maths-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E5523DAEFE793DCC42C0473 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Quick Maths-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B614B24EBAEC518F1718680B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Quick MathsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0192D5971AE0D94B114BE65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Quick MathsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		443DE1752110A40300D9AFE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -270,6 +395,8 @@
 			files = (
 				443DE17F2110A40300D9AFE1 /* SketchViewController.swift in Sources */,
 				443DE17D2110A40300D9AFE1 /* AppDelegate.swift in Sources */,
+				443DE1B0211104E800D9AFE1 /* TestViewController.swift in Sources */,
+				443DE1AE2110D15600D9AFE1 /* UIImage+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +567,7 @@
 		};
 		443DE1A22110A40500D9AFE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E6F209F6B979AE6CB6E77DA /* Pods-Quick Maths.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,6 +586,7 @@
 		};
 		443DE1A32110A40500D9AFE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8E978BAD67B296CD2EA769C /* Pods-Quick Maths.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -476,6 +605,7 @@
 		};
 		443DE1A52110A40500D9AFE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A684042725EF64C7EA0D467 /* Pods-Quick MathsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +627,7 @@
 		};
 		443DE1A62110A40500D9AFE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 613763A1F03BFCD9F484490A /* Pods-Quick MathsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -518,6 +649,7 @@
 		};
 		443DE1A82110A40500D9AFE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEFC7ED8786B6D49C1D98CCB /* Pods-Quick MathsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -538,6 +670,7 @@
 		};
 		443DE1A92110A40500D9AFE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F002DBD9D67D491695070C79 /* Pods-Quick MathsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
