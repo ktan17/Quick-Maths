@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class TestViewController: UIViewController {
 
@@ -32,7 +33,7 @@ class TestViewController: UIViewController {
             let imageView = UIImageView(image: uiImage)
             imageView.center.x = view.center.x
             imageView.frame.origin.y = originY
-            
+
             originY += imageView.frame.height
             view.addSubview(imageView)
         }
@@ -41,6 +42,14 @@ class TestViewController: UIViewController {
         backButton.setTitle("bacK", for: .normal)
         backButton.addTarget(self, action: #selector(back), for: .touchUpInside)
         view.addSubview(backButton)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        Alamofire.request("http://localhost:3000", method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { (response) in
+            print(String(data: response.data!, encoding: .utf8))
+        }
     }
 
     @objc func back() {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SketchViewController: UIViewController {
     private let strokeWidth: CGFloat = 10
@@ -38,18 +39,19 @@ class SketchViewController: UIViewController {
 
     @objc func sendDigits() {
         if let (image, digitRects) = findDigitsInImage() {
-            var digitImages = [CGImage]()
+            var digitData = [Data]()
 
             for rect in digitRects {
                 if
                     let croppedDigit = image.cropping(to: rect),
-                    let digitImage = drawDigit(digitImage: croppedDigit)
+                    let digitImage = drawDigit(digitImage: croppedDigit),
+                    let data = UIImagePNGRepresentation(UIImage(cgImage: digitImage))
                 {
-                    digitImages.append(digitImage)
+                    digitData.append(data)
                 }
             }
 
-            present(TestViewController(images: digitImages), animated: true, completion: nil)
+            postDigitImages(imageData: digitData)
         }
     }
 
@@ -306,8 +308,10 @@ class SketchViewController: UIViewController {
             }
         }
 
+        let sortedDigits = digits.sorted { $0.leftBound < $1.leftBound }
+
         var rects = [CGRect]()
-        for digit in digits {
+        for digit in sortedDigits {
             rects.append(CGRect(x: digit.leftBound,
                                 y: digit.topBound,
                                 width: digit.rightBound - digit.leftBound,
@@ -336,6 +340,32 @@ class SketchViewController: UIViewController {
         } else {
             return nil
         }
+    }
+
+    private func postDigitImages(imageData: [Data]) {
+        let multipartFormData: (MultipartFormData) -> Void = { (formData) in
+            for (index, data) in imageData.enumerated() {
+                formData.append(data, withName: "digits", fileName: "digit\(index).png", mimeType: "image/png")
+            }
+            print(formData.contentType)
+        }
+        let completion: (SessionManager.MultipartFormDataEncodingResult) -> Void = { (result) in
+            switch result {
+            case .success(let upload, _, _):
+                upload.responseJSON(completionHandler: { (response) in
+                    print(String(data: response.data!, encoding: .utf8))
+                })
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+
+        Alamofire.upload(multipartFormData: multipartFormData,
+                         usingThreshold: UINT64_MAX,
+                         to: "http://localhost:3000",
+                         method: .post,
+                         headers: nil,
+                         encodingCompletion: completion)
     }
 
 }
