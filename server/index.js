@@ -3,9 +3,12 @@
 const express = require('express');
 const multer = require('multer');
 const { createCanvas, Image } = require('canvas');
+const tf = require('@tensorflow/tfjs');
+require("@tensorflow/tfjs-node");
 
 const app = express();
 const upload = multer();
+let model;
 
 app.get('/', (req, res) => {
     res.send("Hello, world!");
@@ -17,6 +20,7 @@ app.post('/', upload.array('digits', 12), (req, res, next) => {
 });
 
 app.listen(3000, () => {
+    loadModel();
     console.log("Listening on port 3000!");
 });
 
@@ -46,6 +50,16 @@ function handleFiles(files, res) {
             image.src = buffer;
         });  
     })).then(values => {
-        console.log(values);
+        for (const value of values) {
+            let xs = tf.tensor2d(value, [1, 784]);
+            const output = model.predict(xs.reshape([-1, 28, 28, 1]));
+            const prediction = output.argMax(1).dataSync();
+            console.log(prediction);
+        }
     });
+}
+
+async function loadModel() {
+    model = await tf.loadModel('file://./model/model.json');
+    console.log("model loaded!");
 }
