@@ -18,8 +18,21 @@ class App extends Component {
   }
 
   render() {
+    let containerStyle = {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '100vw',
+      height: '100vh'
+    };
+    let digitStyle = {
+      fontSize: '20em'
+    };
+
     return (
-      <p>{this.state.digit}</p>
+      <div style={containerStyle}>
+        <p style={digitStyle}>{this.state.digit}</p> 
+      </div>
     );
   }
 }
