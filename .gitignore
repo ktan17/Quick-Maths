@@ -1,7 +1,7 @@
 .DSStore/*
-Quick\ Maths/Pods/*
+ios/Pods/*
 server/node_modules/*
-Quick\ Maths/Quick\ Maths.xcworkspace/*
+ios/Quick\ Maths.xcworkspace/*
 client/node_modules/*
 server/package-lock.json
 client/package-lock.json
