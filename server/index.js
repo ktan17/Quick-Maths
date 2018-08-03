@@ -8,34 +8,32 @@ require("@tensorflow/tfjs-node");
 
 const app = express();
 const upload = multer();
-let model;
+const server = app.listen(process.env.port || 8080);
+const io = require('socket.io')(server);
 
-app.get('/', (req, res) => {
-    res.send("Hello, world!");
-});
+// MARK: - Helper Functions
 
-app.post('/', upload.array('digits', 12), (req, res, next) => {
-    handleFiles(req.files, res);
-    res.send("Hello, world!");
-});
+async function loadModel() {
+    const model = await tf.loadModel('file://./model/model.json');
+    console.log("model loaded!");
+    return model;
+}
+const modelPromise = loadModel();
 
-app.listen(3000, () => {
-    loadModel();
-    console.log("Listening on port 3000!");
-});
-
-function handleFiles(files, res) {
-    Promise.all(files.map(file => {
+async function handleFiles(files, res) {
+    // Files is an array of images sent from the mobile client; extract the alpha
+    // channels of each into an array
+    const imageDrawRequests = files.map(file => {
         return new Promise((resolve, reject) => {
-            let buffer = file.buffer;
-            let image = new Image;
+            const buffer = file.buffer;
+            const image = new Image;
 
             image.onload = () => {
                 const canvas = createCanvas(28, 28);
                 const ctx = canvas.getContext('2d');
 
                 ctx.drawImage(image, 0, 0);
-                let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
                 // Image is 28 x 28 = 784, then each pixel is 4 values (RGBA)
                 const alphaArray = [];
@@ -49,17 +47,34 @@ function handleFiles(files, res) {
             };
             image.src = buffer;
         });  
-    })).then(values => {
-        for (const value of values) {
-            let xs = tf.tensor2d(value, [1, 784]);
-            const output = model.predict(xs.reshape([-1, 28, 28, 1]));
-            const prediction = output.argMax(1).dataSync();
-            console.log(prediction);
-        }
     });
+    const imageAlphaBuffers = await Promise.all(imageDrawRequests);
+    const model = await modelPromise;
+
+    // Feed each buffer of alpha channels to the ML model 
+    const digits = [];
+    for (const alphaBuffer of imageAlphaBuffers) {
+        let xs = tf.tensor2d(alphaBuffer, [1, 784]);
+        const output = model.predict(xs.reshape([-1, 28, 28, 1]));
+        const prediction = output.argMax(1).dataSync()[0];
+        digits.push(prediction);
+    }
+
+    // Emit the number to all clients
+    io.emit('digit', Number(digits.join("")));
 }
 
-async function loadModel() {
-    model = await tf.loadModel('file://./model/model.json');
-    console.log("model loaded!");
-}
+// MARK: - Express server and socket logic
+
+app.get('/', (req, res) => {
+    res.send("Hello, world!");
+});
+
+app.post('/', upload.array('digits', 12), (req, res, next) => {
+    handleFiles(req.files, res);
+    res.send("Hello, world!");
+});
+
+io.on('connection', (socket) => {
+    console.log("got a connection!");
+})

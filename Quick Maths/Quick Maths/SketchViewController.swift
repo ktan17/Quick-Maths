@@ -362,7 +362,7 @@ class SketchViewController: UIViewController {
 
         Alamofire.upload(multipartFormData: multipartFormData,
                          usingThreshold: UINT64_MAX,
-                         to: "http://localhost:3000",
+                         to: "http://localhost:8080",
                          method: .post,
                          headers: nil,
                          encodingCompletion: completion)
